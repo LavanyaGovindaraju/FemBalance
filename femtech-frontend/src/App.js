@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+// File: src/App.js
+import React from 'react';
+import { ThemeProvider, CssBaseline, Container, Paper } from '@mui/material';
+import FormSection from './components/FormSection';
+import theme from './theme/customTheme';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Container maxWidth="md">
+        <Paper
+          elevation={3}
+          sx={{
+            p: 5,
+            borderRadius: 4,
+            backgroundColor: '#ffffff',
+            maxWidth: '700px',
+            mx: 'auto',
+            boxShadow: 3,
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <FormSection />
+        </Paper>
+      </Container>
+    </ThemeProvider>
   );
 }
 
