@@ -1,124 +1,70 @@
-# FemTech Hormonal Health App
+# Getting Started with Create React App
 
-A web-based application designed to help users understand potential hormonal health conditions by collecting lifestyle and physiological information. It also outlines future integration with wearable devices for real-time health monitoring.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
----
+## Available Scripts
 
-## 🔧 Tech Stack
+In the project directory, you can run:
 
-* **Frontend:** React.js + Material UI (deployed via Vercel)
-* **Backend:** FastAPI (Python), containerized with Docker (deployed via Render)
-* **AI Logic:** Mock predictor returning risk scores and health conditions
-* **Data Integration:** Placeholder for future wearable device APIs (Fitbit, Google Fit)
+### `npm start`
 
----
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## 🚀 Features
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-* User-friendly form for collecting:
+### `npm test`
 
-  * Age, weight, height, cycle details, sleep, activity, and stress
-  * Symptoms input with yes/no interface
-* AI prediction with:
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-  * Risk score
-  * Suggested condition (e.g., PCOS, PMDD)
-  * Personalized lifestyle recommendation
-* Risk score visualized with a circular chart
-* Downloadable health report (PDF)
-* Smooth fade-in results & modern card UI
+### `npm run build`
 
----
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## 🐳 Dockerized Backend Setup
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-### Prerequisites
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-* Docker installed and running
+### `npm run eject`
 
-### Build & Run
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-```bash
-# Build the image
-docker build -t femtech-api .
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-# Run the container
-docker run -d -p 8000:8000 femtech-api
-```
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-### Access API
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-Visit: [http://localhost:8000/docs](http://localhost:8000/docs)
+## Learn More
 
----
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-## 🌐 Deployment
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Frontend (Vercel)
+### Code Splitting
 
-* Connect to GitHub → auto-deploy from `main`
-* Visit: `https://your-vercel-app.vercel.app`
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Backend (Render)
+### Analyzing the Bundle Size
 
-* Dockerized deploy from GitHub repo
-* Set port: 8000
-* Public endpoint: `https://your-backend-service.onrender.com`
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
----
+### Making a Progressive Web App
 
-## 📁 Project Structure
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-```
-frontend/
-├── src/
-│   ├── components/
-│   │   ├── FormSection.js
-│   │   ├── ResultSection.js
-│   │   ├── SymptomCard.js
-│   │   └── RiskScoreCircle.js
-│   └── index.js
-├── public/
-└── package.json
+### Advanced Configuration
 
-backend/
-├── main.py
-├── requirements.txt
-└── Dockerfile
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
----
+### Deployment
 
-## 📷 Demo Screenshots (Optional)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-Add screenshots of the app form and result section here.
+### `npm run build` fails to minify
 
----
-
-## 📡 Future Enhancements
-
-* Real-time data from Fitbit / Google Fit APIs
-* ML model integration using real health datasets
-* User login + data persistence
-* Admin dashboard and multi-user management
-
----
-
-## 🧪 Local Development
-
-### Frontend
-
-```bash
-cd frontend
-npm install
-npm start
-```
-
-### Backend
-
-```bash
-cd backend
-uvicorn main:app --reload
-```
-
----
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
