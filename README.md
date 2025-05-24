@@ -89,9 +89,8 @@ backend/
 
 ---
 
-## 📷 Demo Screenshots (Optional)
+## 📷 Demo Screenshots
 
-Add screenshots of the app form and result section here.
 
 ---
 
