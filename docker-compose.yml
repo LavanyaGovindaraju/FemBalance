@@ -1,0 +1,23 @@
+version: '3.9'
+
+services:
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+    restart: unless-stopped
+
+  frontend:
+    working_dir: /app
+    image: node:18
+    volumes:
+      - ./frontend:/app
+    ports:
+      - "3000:3000"
+    command: sh -c "npm install && npm start"
+    environment:
+      - NODE_OPTIONS=--openssl-legacy-provider
+    restart: unless-stopped
