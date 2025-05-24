@@ -1,13 +1,13 @@
 import subprocess
 import os
 import sys
+import time
 
 def run_command(cmd_list, cwd):
-    return subprocess.Popen(cmd_list, cwd=cwd, shell=True)
+    return subprocess.Popen(cmd_list, cwd=cwd, shell=False)
 
 def main():
     root_dir = os.path.dirname(os.path.abspath(__file__))
-    print(root_dir)
     frontend_dir = os.path.join(root_dir, "frontend")
     backend_dir = os.path.join(root_dir, "backend")
 
@@ -15,19 +15,19 @@ def main():
         print("Error: 'frontend' or 'backend' directory not found.")
         sys.exit(1)
 
-    os.environ["NODE_OPTIONS"] = "--openssl-legacy-provider"
-
     try:
-        print("Installing frontend dependencies...")
-        subprocess.check_call(["npm", "install"], cwd=frontend_dir, shell=True)
-
-        print("Starting frontend...")
-        frontend_proc = run_command(["npm", "start"], cwd=frontend_dir)
-
-        print("Starting backend...")
+        # Start backend first
+        print("Starting backend (FastAPI)...")
         backend_proc = run_command(["uvicorn", "main:app", "--reload"], cwd=backend_dir)
 
-        print("Both frontend and backend are running. Press Ctrl+C to stop.")
+        # Wait a few seconds to ensure backend is up
+        time.sleep(3)
+
+        # Start frontend
+        print("Starting frontend (React)...")
+        frontend_proc = run_command(["npm.cmd", "start"], cwd=frontend_dir)
+
+        print("App is running. Press Ctrl+C to stop.")
         frontend_proc.wait()
         backend_proc.wait()
 
