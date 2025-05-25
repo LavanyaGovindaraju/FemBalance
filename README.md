@@ -31,6 +31,8 @@ A web-based application designed to help users understand potential hormonal hea
 ## 🛠️ Process Flow
 <img src="images/Data_flow.png" alt="App Screenshot" width="600"/>
 
+---
+
 ## 📥 Getting Started
 
 ### 🛠️ Step 1: Install Node.js (includes npm)
