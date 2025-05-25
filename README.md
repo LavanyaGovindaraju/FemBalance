@@ -29,8 +29,7 @@ A web-based application designed to help users understand potential hormonal hea
 ---
 
 ## 🛠️ Process Flow
-
-![](images/Data_flow.png)
+<img src="images/Data_flow.png" alt="App Screenshot" width="600"/>
 
 ## 📥 Getting Started
 
