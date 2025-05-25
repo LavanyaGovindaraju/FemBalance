@@ -27,6 +27,11 @@ A web-based application designed to help users understand potential hormonal hea
 - Smooth fade-in results and modern card UI
 
 ---
+
+## 🛠️ Process Flow
+
+![](images/Data_flow.png)
+
 ## 📥 Getting Started
 
 ### 🛠️ Step 1: Install Node.js (includes npm)
