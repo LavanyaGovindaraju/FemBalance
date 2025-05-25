@@ -117,7 +117,7 @@ This will:
 
 ## 📷 Demo UI
 
-![](images\health_predictor.png)
+![](images/health_predictor.png)
 
 ---
 
